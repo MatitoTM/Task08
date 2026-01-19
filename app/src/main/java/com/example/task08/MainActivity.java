@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView iV;
     ImageButton iB;
+    int ranNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +27,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clicked(View view) {
+        ranNum = (int)Math.round(Math.random()*2 + 1);
+
+        if (ranNum == 1)
+        {
+            iB.setImageResource(R.drawable.ib1);
+            iV.setImageResource(R.drawable.pic1);
+        }
+        else if (ranNum == 2)
+        {
+            iB.setImageResource(R.drawable.ib2);
+            iV.setImageResource(R.drawable.pic2);
+        }
+        else if (ranNum == 3)
+        {
+            iB.setImageResource(R.drawable.ib3);
+            iV.setImageResource(R.drawable.pic3);
+        }
     }
 }
